@@ -1,10 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const apiRoutes = require('./routes/apiRoutes');
 
 router.use(require('./candidateRoutes'));
 router.use(require('./partyRoutes'));
-
-app.use('/api', apiRoutes);
+router.use(require('./voterRoutes'));
 
 module.exports = router;
